@@ -8,17 +8,18 @@ spring:
     hibernate:
       naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
       naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  application:
+    name: servicio-cursos
   mvc:
       pathmatch:
         matching-strategy: ant-path-matcher
-  application:
-    name: servicio-cursos
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
   instance:
-    instanceId: instancia1
+      instance-id: instancia1
 server:
-   port: 8001
+  port: 8080 
+
 
