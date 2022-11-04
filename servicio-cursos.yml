@@ -8,8 +8,6 @@ spring:
     hibernate:
       naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
       naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-  application:
-    name: servicio-cursos
   mvc:
       pathmatch:
         matching-strategy: ant-path-matcher
