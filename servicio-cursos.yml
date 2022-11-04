@@ -11,6 +11,8 @@ spring:
   mvc:
       pathmatch:
         matching-strategy: ant-path-matcher
+  application:
+    name: servicio-cursos
 eureka:
   client:
     serviceUrl:
