@@ -3,22 +3,18 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/escuela?serverTimezone=UTC
     username: root
-    password: admin   
+    password: admin
   jpa:
     hibernate:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-  application:
-    name: servicio-cursos
-  mvc:
-      pathmatch:
-        matching-strategy: ant-path-matcher
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl   
 eureka:
   client:
-    serviceUrl:
+    service-url:
       defaultZone: http://localhost:8761/eureka
   instance:
-      instance-id: instancia1
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+      
 server:
-  port: 8887 
+   port: ${PORT:0}
